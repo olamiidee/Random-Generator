@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: hsl(217, 19%, 24%);
+}
+
+.advice-num{
+    color:hsl(150, 100%, 66%);
+}
