@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background: hsl(217, 19%, 24%);
+body {
+  background-color: #202632;
+  font-family: "Manrope", sans-serif;
 }
 
-.advice-num{
-    color:hsl(150, 100%, 66%);
+.advice-cont {
+  background-color: #313a49;
+  box-shadow: 2px 12px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dice-cont:hover {
+  box-shadow: 0px 0px 30px rgba(83, 255, 171, 1);
+}
+
+.dice-cont {
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.4s ease;
 }

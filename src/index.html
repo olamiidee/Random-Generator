@@ -4,21 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
     <link href="/output.css" rel="stylesheet" />
     <title>Document</title>
   </head>
-  <body>
-    <!-- container -->
-    <div class="flex justify-center items-center wrapper">
-      <div class="w-[30%] h-[30%] border-2 text-center py-5">
-        <div id="output">
-          <p class="advice-num"></p>
-        </div>
+  <body class="w-full h-full">
+    <!-- Container -->
+    <div class="flex justify-center items-center h-screen wrapper">
+      <!-- Advice Container -->
+      <div
+        class="bg-darkBlue w-[60%] md:w-[30%] h-auto rounded-lg text-center py-5 px-4 md:px-8 relative advice-cont"
+      >
+        <!-- Advice Num -->
         <div>
-          <h3 class="text-[18px] font-[800] text-white advice" id="advice"></h3>
+          <p
+            class="text-green text-[8px] md:text-[12px] leading-3 tracking-widest advice-num"
+          ></p>
         </div>
 
-        <img src="./images/icon-dice.svg" id="dice-btn" />
+        <!-- Advice -->
+        <div class="py-6">
+          <h3
+            class="text-[12px] md:text-[18px] font-[800] text-white advice"
+            id="advice"
+          ></h3>
+        </div>
+
+        <!-- Line -->
+        <div>
+          <img class="pb-8" src="./images/pattern-divider-desktop.svg" />
+        </div>
+
+        <!-- Dice -->
+        <div
+          class="flex justify-center items-center rounded-[50%] bg-green w-[50px] h-[50px] mx-auto cursor-pointer dice-cont"
+        >
+          <img
+            class="w-[50%] h-[50%]"
+            src="./images/icon-dice.svg"
+            id="dice-btn"
+          />
+        </div>
       </div>
     </div>
     <script src="app.js"></script>
