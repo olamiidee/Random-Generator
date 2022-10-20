@@ -2,17 +2,21 @@ const adviceNum = document.querySelector(".advice-num");
 const advice = document.getElementById("advice");
 const diceBtn = document.getElementById("dice-btn");
 
-btn.addEventListener("click", btnHandler);
+window.addEventListener("load", btnHandler);
+
+// Dice btnHandler
+diceBtn.addEventListener("click", btnHandler);
+
 let prevId;
 async function btnHandler() {
-  const quotesObj = await fetchQoute();
+  const quotesObj = await fetchQuote();
   console.log({ quotesObj, prevId });
 
-  adviceNum.textContent = quotesObj.id;
-  advice.textContent = quotesObj.advice;
+  adviceNum.textContent = `ADVICE #` + quotesObj.id;
+  advice.textContent = `"` + quotesObj.advice + `"`;
 }
 
-async function fetchQoute() {
+async function fetchQuote() {
   let result;
   const res = await fetch("https://api.adviceslip.com/advice");
 
@@ -21,7 +25,7 @@ async function fetchQoute() {
 
   if (prevId == result.id) {
     console.log("Id;s are the same", prevId, result.id);
-    return await fetchQoute();
+    return await fetchQuote();
   }
   prevId = result.id;
   return result;
